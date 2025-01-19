@@ -6,21 +6,21 @@ This Go library provides a simple JSON parser that tokenizes a JSON string and p
 
 ## Key Features
 
-- Tokenization: Converts a JSON string into individual tokens, such as {, }, [, ], ,, and :.
+- **Tokenization**: Converts a JSON string into individual tokens, such as `{`, `}`, `[`, `]`, `,` and `:`.
 
-- Parsing: Supports parsing JSON objects and arrays into Go maps and slices, respectively.
+- **Parsing**: Supports parsing JSON objects and arrays into Go maps and slices, respectively.
 
-- Primitive Types: Handles numbers (integers), booleans (true/false), strings and null.
+- **Primitive Types**: Handles numbers (integers), booleans (true/false), strings and null.
 
-- Error Tolerance: Handles common syntax issues gracefully.
+- **Error Tolerance**: Handles common syntax issues gracefully.
 
 ## Limitations and Known Issues
 
-- No Floating Point Numbers: The parser currently supports integers but does not handle floating-point numbers.
+- **No Floating Point Numbers**: The parser currently supports integers but does not handle floating-point numbers.
 
-- Limited Error Handling: Syntax errors are not explicitly reported; instead, the parser just return nil without more info.
+- **Limited Error Handling**: Syntax errors are not explicitly reported; instead, the parser just return nil without more info.
 
-- No Escape Characters: Special characters within strings (like \ or \n) are not supported.
+- **No Escape Characters**: Special characters within strings (like \ or \n) are not supported.
 
 ## Usage and Testing
 
@@ -46,8 +46,6 @@ func main() {
 }
 ```
 
-You can also find a `main.go` file in the `example` folder implementing a CLI tool to parse JSON using this library.
-
 ## Contributions and Feedback
 
 If you have any suggestions or ideas for improving the library, or if you've discovered a bug, I would greatly appreciate your feedback. Please feel free to submit a pull request or open an issue in the project repository.
@@ -62,12 +60,12 @@ This project was developed by Fayçal Beghalia. Any use of this code is authoriz
 faycal@FaycalLaptop:~/faycal/projects/json-parser$ go run main.go test.json 
 {
   "fef": {
-    "item2": "value3",
+    "item2": 30,
     "item3": "value4"
   },
   "item1": [
-    "value1",
-    "value2"
+    null,
+    false
   ]
 }
 ```
