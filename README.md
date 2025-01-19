@@ -6,21 +6,21 @@ This Go library provides a simple JSON parser that tokenizes a JSON string and p
 
 ## Key Features
 
-- Tokenization: Converts a JSON string into individual tokens, such as {, }, [, ], ,, and :.
+- **Tokenization**: Converts a JSON string into individual tokens, such as `{`, `}`, `[`, `]`, `,` and `:`.
 
-- Parsing: Supports parsing JSON objects and arrays into Go maps and slices, respectively.
+- **Parsing**: Supports parsing JSON objects and arrays into Go maps and slices, respectively.
 
-- Primitive Types: Handles numbers (integers), booleans (true/false), strings and null.
+- **Primitive Types**: Handles numbers (integers), booleans (true/false), strings and null.
 
-- Error Tolerance: Handles common syntax issues gracefully.
+- **Error Tolerance**: Handles common syntax issues gracefully.
 
 ## Limitations and Known Issues
 
-- No Floating Point Numbers: The parser currently supports integers but does not handle floating-point numbers.
+- **No Floating Point Numbers**: The parser currently supports integers but does not handle floating-point numbers.
 
-- Limited Error Handling: Syntax errors are not explicitly reported; instead, the parser just return nil without more info.
+- **Limited Error Handling**: Syntax errors are not explicitly reported; instead, the parser just return nil without more info.
 
-- No Escape Characters: Special characters within strings (like \ or \n) are not supported.
+- **No Escape Characters**: Special characters within strings (like \ or \n) are not supported.
 
 ## Usage and Testing
 
