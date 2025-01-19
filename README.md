@@ -24,29 +24,7 @@ This Go library provides a simple JSON parser that tokenizes a JSON string and p
 
 ## Usage and Testing
 
-Example of a CLI tool:
-
-```go
-func main() {
-	if len(os.Args) != 2 {
-		fmt.Println("Usage: go run main.go <filename>")
-		return
-	}
-	content, _ := os.ReadFile(os.Args[1])
-	tokens := jsonparser.Tokenize(string(content))
-	result, _ := jsonparser.Parse(tokens)
-
-	// Pretty print the result
-	prettyJSON, err := json.MarshalIndent(result, "", "  ")
-	if err != nil {
-		fmt.Println("Failed to generate JSON:", err)
-		return
-	}
-	fmt.Println(string(prettyJSON))
-}
-```
-
-You can also find a `main.go` file in the `example` folder implementing a CLI tool to parse JSON using this library.
+You can find a CLI tool in the `cmd/jsonparser/main.go` showcasing how easy the library is to use.
 
 ## Contributions and Feedback
 
@@ -59,15 +37,18 @@ This project was developed by Fayçal Beghalia. Any use of this code is authoriz
 ## Example
 
 ```sh
-faycal@FaycalLaptop:~/faycal/projects/json-parser$ go run main.go test.json 
+faycal@FaycalLaptop:~/faycal/projects/json-parser$ go run cmd/jsonparser/main.go test.json
 {
-  "fef": {
-    "item2": "value3",
-    "item3": "value4"
-  },
-  "item1": [
-    "value1",
-    "value2"
-  ]
+  "Humans": [
+    {
+      "age": 30,
+      "name": "John"
+    },
+    {
+      "age": 25,
+      "name": "Jane"
+    }
+  ],
+  "Myskills": null
 }
 ```
